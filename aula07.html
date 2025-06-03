@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link href="//www.gstatic.com/images/branding/searchlogo/ico/favicon.ico" rel="icon">
+        <title>Aula 07</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 20px;
+                background-color: #4f4f4f;
+            }
+
+            h2 {
+                margin-top: 40px;
+            }
+
+            .box {
+                width: 80px;
+                height: 80px;
+                color: white;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+            }
+
+            .box1 { 
+                background-color: #ff4c4c;
+                
+                order: 1
+             }
+            .box2 { background-color: #ffa500; }
+            .box3 { background-color: #f0e130; color: #333; 
+                order: 3
+            }
+            .box4 { 
+                background-color: #4caf50; 
+                order: 2;
+            }
+            .box5 { background-color: #2196f3; }
+            .box6 { background-color: #9c27b0; }
+            .box7 { background-color: #795548; }
+
+            .container {
+                margin: 10px 0;
+                padding: 10px;
+                background: #ffffff;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+            }
+
+            /* Flexbox em coluna */
+            .flex-column {
+                display: flex;
+                flex-direction: column;
+                gap: 40px 20px;
+                flex-wrap: wrap;
+                height: 400px;
+            }
+
+            /* Flexbox em linha */
+            .flex-row {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            /* Grid simples com 3 colunas */
+            .grid-3-cols {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+
+            /* Grid com tamanhos variados */
+            .grid-template {
+                display: grid;
+                grid-template-columns: 100px 2fr 1fr;
+                grid-template-rows: auto auto;
+                gap: 10px;
+            }
+
+            /* Grid com áreas nomeadas */
+            .grid-areas {
+                display: grid;
+                grid-template-areas:
+                    "header header header"
+                    "sidebar main main"
+                    "footer footer footer";
+                grid-template-columns: 1fr 2fr 2fr;
+                grid-template-rows: auto 1fr auto;
+                gap: 10px;
+            }
+
+            .header { grid-area: header; }
+            .sidebar { grid-area: sidebar; }
+            .main { grid-area: main; }
+            .footer { grid-area: footer; }
+        </style>
+    </head>
+    <body>
+        <h1>Exemplos com Flexbox e Grid</h1>
+
+        <h2>Flexbox - Direção Coluna</h2>
+        <div class="container flex-column">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box4">4</div>
+            <div class="box box5">5</div>
+            <div class="box box6">6</div>
+            <div class="box box7">7</div>
+            
+        </div>
+
+        <h2>Flexbox - Direção Linha</h2>
+        <div class="container flex-row">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box4">4</div>
+            <div class="box box5">5</div>
+            <div class="box box6">6</div>
+            <div class="box box7">7</div>
+        </div>
+
+        <h2>CSS Grid - 3 Colunas Iguais</h2>
+        <div class="container grid-3-cols">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box4">4</div>
+            <div class="box box5">5</div>
+            <div class="box box6">6</div>
+            <div class="box box7">7</div>
+        </div>
+
+        <h2>CSS Grid - Colunas com tamanhos variados</h2>
+        <div class="container grid-template">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box4">4</div>
+            <div class="box box5">5</div>
+            <div class="box box6">6</div>
+            <div class="box box7">7</div>
+        </div>
+
+        <h2>CSS Grid - Áreas Nomeadas</h2>
+        <div class="container grid-areas">
+            <div class="box box1 header">1</div>
+            <div class="box box2 sidebar">2</div>
+            <div class="box box3 main">3</div>
+            <div class="box box4 footer">4</div>
+            <div class="box box5">5</div>
+            <div class="box box6">6</div>
+            <div class="box box7">7</div>
+        </div>
+    </body>
+</html>
